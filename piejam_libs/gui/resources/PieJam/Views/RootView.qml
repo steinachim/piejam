@@ -69,6 +69,22 @@ Item {
                     Layout.fillHeight: true
                 }
 
+                ToolButton {
+                    icon.width: 24
+                    icon.height: 24
+                    icon.source: "qrc:///images/icons/load.svg"
+                    display: AbstractButton.IconOnly
+                    onClicked: root.modelManager.rootView.loadSession()
+                }
+
+                ToolButton {
+                    icon.width: 24
+                    icon.height: 24
+                    icon.source: "qrc:///images/icons/save.svg"
+                    display: AbstractButton.IconOnly
+                    onClicked: root.modelManager.rootView.saveSession()
+                }
+
                 InfoToolButton {
                     property int lastMessagesCount: 0
                     property var logMessages: root.modelManager.log.logMessages

@@ -53,6 +53,8 @@ public:
     Q_INVOKABLE void showInfo();
     Q_INVOKABLE void showSettings();
     Q_INVOKABLE void showPower();
+    Q_INVOKABLE void loadSession();
+    Q_INVOKABLE void saveSession();
 
 signals:
     void modeChanged();

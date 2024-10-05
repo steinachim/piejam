@@ -88,10 +88,12 @@ SPDX-License-Identifier: CC0-1.0
         <file>images/icons/cog.svg</file>
         <file>images/icons/cycle_arrows.svg</file>
         <file>images/icons/info.svg</file>
+        <file>images/icons/load.svg</file>
         <file>images/icons/micro-sd.svg</file>
         <file>images/icons/midi-port.svg</file>
         <file>images/icons/pencil.svg</file>
         <file>images/icons/power.svg</file>
+        <file>images/icons/save.svg</file>
         <file>images/icons/tune-vertical.svg</file>
         <file>qtquickcontrols2.conf</file>
         <file>PieJam/Controls/ValueIndicatorBar.qml</file>

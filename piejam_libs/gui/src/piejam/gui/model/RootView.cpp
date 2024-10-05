@@ -5,6 +5,8 @@
 #include <piejam/gui/model/RootView.h>
 
 #include <piejam/runtime/actions/root_view_actions.h>
+#include <piejam/runtime/actions/load_session.h>
+#include <piejam/runtime/actions/save_session.h>
 #include <piejam/runtime/selectors.h>
 #include <piejam/to_underlying.h>
 
@@ -48,6 +50,20 @@ void
 RootView::showPower()
 {
     switchRootViewMode(runtime::root_view_mode::power);
+}
+
+void
+RootView::loadSession()
+{
+    runtime::actions::load_session action(std::filesystem::path("/home/steinachim/abcd.session"));
+    dispatch(action);
+}
+
+void
+RootView::saveSession()
+{
+    runtime::actions::save_session action(std::filesystem::path("/home/steinachim/abcd.session"));
+    dispatch(action);
 }
 
 void
