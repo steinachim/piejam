@@ -32,6 +32,7 @@ public:
         Power,
         FxBrowser,
         FxModule,
+        SessionList
     };
 
     Q_ENUM(Mode)
@@ -55,6 +56,7 @@ public:
     Q_INVOKABLE void showPower();
     Q_INVOKABLE void loadSession();
     Q_INVOKABLE void saveSession();
+    Q_INVOKABLE void showSessionList();
 
 signals:
     void modeChanged();

@@ -14,7 +14,8 @@ enum class root_view_mode : int
     settings,
     power,
     fx_browser,
-    fx_module
+    fx_module,
+    session_list
 };
 
 } // namespace piejam::runtime

@@ -211,6 +211,8 @@ apply_mixer_io(
 void
 apply_session::reduce(state& st) const
 {
+    runtime::reset_state(st);
+
     apply_external_audio_device_configs<io_direction::input>(
             st,
             session->external_audio_input_devices,

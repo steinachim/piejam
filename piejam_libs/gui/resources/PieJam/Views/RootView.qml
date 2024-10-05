@@ -85,6 +85,14 @@ Item {
                     onClicked: root.modelManager.rootView.saveSession()
                 }
 
+                ToolButton {
+                    icon.width: 24
+                    icon.height: 24
+                    icon.source: "qrc:///images/icons/session-list.svg"
+                    display: AbstractButton.IconOnly
+                    onClicked: root.modelManager.rootView.showSessionList()
+                }
+
                 InfoToolButton {
                     property int lastMessagesCount: 0
                     property var logMessages: root.modelManager.log.logMessages
@@ -184,6 +192,13 @@ Item {
                 Loader {
                     sourceComponent: FxModule {
                         model: root.modelManager.fxModule
+                    }
+                    asynchronous: true
+                }
+
+                Loader {
+                    sourceComponent: SessionList {
+                        model: root.modelManager.sessionList
                     }
                     asynchronous: true
                 }

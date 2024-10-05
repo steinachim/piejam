@@ -776,4 +776,30 @@ update_midi_assignments(state& st, midi_assignments_map const& assignments)
     update_midi_assignments(*st.midi_assignments.lock(), assignments);
 }
 
+void
+reset_state(state& st)
+{
+    // only keep main channel
+    for( auto channel: st.mixer_state.channels)
+    {
+        if ( channel.first != st.mixer_state.main )
+        {
+            remove_mixer_channel(st, channel.first);
+        }
+    }
+
+    // reset the output to default back again
+    st.mixer_state.channels.lock()[st.mixer_state.main].out =
+            piejam::default_t{};
+    st.params[st.mixer_state.channels[st.mixer_state.main].record].value.set(
+            true);
+
+    // remove external inputs/outputs
+    for ( auto dev : st.external_audio_state.devices )
+    {
+        remove_external_audio_device(st, dev.first);
+    }
+
+}
+
 } // namespace piejam::runtime

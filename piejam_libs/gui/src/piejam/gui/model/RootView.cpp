@@ -67,6 +67,12 @@ RootView::saveSession()
 }
 
 void
+RootView::showSessionList()
+{
+    switchRootViewMode(runtime::root_view_mode::session_list);
+}
+
+void
 RootView::onSubscribe()
 {
     observe(runtime::selectors::select_root_view_mode,

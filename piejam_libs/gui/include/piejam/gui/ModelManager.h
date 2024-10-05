@@ -34,6 +34,8 @@ class ModelManager final : public QObject
     Q_PROPERTY(piejam::gui::model::Mixer* mixer READ mixer CONSTANT)
     Q_PROPERTY(piejam::gui::model::Info* info READ info CONSTANT)
     Q_PROPERTY(piejam::gui::model::Log* log READ log CONSTANT)
+    Q_PROPERTY(piejam::gui::model::SessionList* sessionList READ sessionList CONSTANT)
+
     Q_PROPERTY(piejam::gui::model::FxBrowser* fxBrowser READ fxBrowser CONSTANT)
     Q_PROPERTY(
             piejam::gui::model::FxModuleView* fxModule READ fxModule CONSTANT)
@@ -79,6 +81,11 @@ public:
         return m_log.get();
     }
 
+    auto sessionList() const -> model::SessionList*
+    {
+        return m_sessionList.get();
+    }
+
     auto fxBrowser() const -> model::FxBrowser*
     {
         return m_fxBrowser.get();
@@ -105,6 +112,7 @@ private:
     std::unique_ptr<model::Mixer> m_mixer;
     std::unique_ptr<model::Info> m_info;
     std::unique_ptr<model::Log> m_log;
+    std::unique_ptr<model::SessionList> m_sessionList;
     std::unique_ptr<model::FxBrowser> m_fxBrowser;
     std::unique_ptr<model::FxModuleView> m_fxModule;
 

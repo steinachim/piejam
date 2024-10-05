@@ -174,4 +174,6 @@ void remove_fx_module(
 
 void update_midi_assignments(state&, midi_assignments_map const&);
 
+void reset_state(state&);
+
 } // namespace piejam::runtime

@@ -42,6 +42,7 @@
 #include <piejam/gui/model/Parameter.h>
 #include <piejam/gui/model/RootView.h>
 #include <piejam/gui/model/ScopeData.h>
+#include <piejam/gui/model/SessionList.h>
 #include <piejam/gui/model/SpectrumData.h>
 #include <piejam/gui/model/StereoLevelParameter.h>
 #include <piejam/gui/model/StringList.h>
@@ -94,6 +95,7 @@ runRegistration()
     qRegisterMetaType<piejam::gui::model::RootView*>();
     qRegisterMetaType<piejam::gui::model::ScopeData*>();
     qRegisterMetaType<piejam::gui::model::SpectrumData*>();
+    qRegisterMetaType<piejam::gui::model::SessionList*>();
     qRegisterMetaType<piejam::gui::model::StereoLevelParameter*>();
     qRegisterMetaType<piejam::gui::model::StringList*>();
     qRegisterMetaType<piejam::gui::model::WaveformDataObject*>();
@@ -188,6 +190,7 @@ ModelManager::ModelManager(
     , m_mixer(std::make_unique<model::Mixer>(dispatch, state_change_subscriber))
     , m_info(std::make_unique<model::Info>(dispatch, state_change_subscriber))
     , m_log(std::make_unique<model::Log>(dispatch, state_change_subscriber))
+    , m_sessionList(std::make_unique<model::SessionList>(dispatch, state_change_subscriber))
     , m_fxBrowser(std::make_unique<model::FxBrowser>(
               dispatch,
               state_change_subscriber))

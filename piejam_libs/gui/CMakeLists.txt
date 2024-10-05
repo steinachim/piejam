@@ -81,6 +81,7 @@ add_library(piejam_gui STATIC
     include/piejam/gui/model/RootView.h
     include/piejam/gui/model/ScopeData.h
     include/piejam/gui/model/ScopeDataGenerator.h
+    include/piejam/gui/model/SessionList.h
     include/piejam/gui/model/SpectrumData.h
     include/piejam/gui/model/SpectrumDataGenerator.h
     include/piejam/gui/model/SpectrumDataPoint.h
@@ -140,6 +141,7 @@ add_library(piejam_gui STATIC
     src/piejam/gui/model/PitchGenerator.cpp
     src/piejam/gui/model/RootView.cpp
     src/piejam/gui/model/ScopeDataGenerator.cpp
+    src/piejam/gui/model/SessionList.cpp
     src/piejam/gui/model/SpectrumDataGenerator.cpp
     src/piejam/gui/model/StereoLevelParameter.cpp
     src/piejam/gui/model/WaveformDataGenerator.cpp

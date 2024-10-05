@@ -25,6 +25,7 @@ class FxModule;
 
 class Info;
 class Log;
+class SessionList;
 
 class Mixer;
 class MixerChannelModels;
