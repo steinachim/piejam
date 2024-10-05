@@ -3,3 +3,20 @@
 # SPDX-License-Identifier: CC0-1.0
 
 *.txt.user
+*.a
+*.dot
+*/piejam_app
+piejam_app/*.dot
+CMakeFiles
+CMakeCache.txt
+CTestCustom.cmake
+cmake_install.cmake
+Makefile
+build
+
+*_autogen
+*.qrc.depends
+qrc*resources.cpp
+
+.qtcreator
+.vscode
